@@ -1,4 +1,4 @@
-def test(text):
+def title(text):
     print("-----------")
     print(text)
     print("-----------")
@@ -7,7 +7,7 @@ def test(text):
 
 
 
-test("HELLO WORLD")
+title("HELLO WORLD")
 
 username = input("Whats your name human? ")
 message = 'Greeting and salutations ' + username
