@@ -7,8 +7,9 @@ print("Guess the Number")
 print("----------------")
 print()
 
-the_number = random.randint(0, 100)
+the_number = random.randint(0, 10)
 guess = -1
+attempts = 0
 
 
 
@@ -19,17 +20,22 @@ print(the_number)
 
 
 while guess != the_number:
-    guess_text = input('Guess the number between 0 nad 100: ')
+    guess_text = input('Guess the number between 0 nad 10: ')
     guess = int(guess_text)
-    
+    #attempts =+ 1 
     if guess < the_number:
-        print("too low")
+        print(f'{guess} is too low')
+        attempts += 1 
     elif guess > the_number:
-        print("to0 high")
+        print(f'{guess} is too too high')
+        attempts += 1 
     else:
-        print('you win')
+        attempts += 1 
+        print("Guess: ")
+        print(guess)
+        print("Attempts: ")
+        print(attempts)
+        print('YOU WIN')
 
 
-print("GAME OVER MAN")
-print("Guess: ")
-print(guess)
+#print("GAME OVER MAN")
